@@ -1,33 +1,55 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
 
 </head>
 <style is:global>
     :root {
         color-scheme: light dark;
     }
+
     html {
         font-family: system-ui, sans-serif;
     }
+
     body {
-        background-color:  rgb(27, 27, 30);;
+        background-color: rgb(27, 27, 30);
+        ;
         display: flex;
-        color: #fff; 
-		height: 100vh;
-		flex-direction: column;
+        color: #fff;
+        height: 100vh;
+        flex-direction: column;
     }
-   
+
+    #sidebar {
+        transition: transform 0.1s ease-in-out;
+    }
+
+    #sidebar.hidden {
+        transform: translateX(-100%);
+    }
+
+    #equis {
+        transition: transform 0.1s ease-in-out;
+    }
+
+    #equis.hidden {
+        transform: translateX(100%);
+    }
 </style>
+
 <body>
     <div class="fixed bg-gray-800 w-full">
         <header class="flex justify-between items-center py-3 w-[1040px] mx-auto">
             <div class="flex items-center  py-45">
-                <img class="rounded-full w-[50px] h-[50px] mr-2" src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg" alt="">
+                <img class="rounded-full w-[50px] h-[50px] mr-2"
+                    src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+                    alt="">
                 <span class="ml-3 text-xl">Julio Amaya</span>
             </div>
             <nav class="flex flex-row gap-x-10 mt-2">
@@ -36,95 +58,104 @@
                 <a href="">Contact</a>
             </nav>
             <div class="py-3 fixed  top-4 right-[100px]">
-                <button class="focus:outline-none">
+                <button class="focus:outline-none" id="buttonOpen">
                     <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
                 </button>
             </div>
         </header>
-        
+        <div class='bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden'
+            id="sidebar">
+        </div>
+
+        <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+            <div class="flex justify-end mt-4">
+                <button class="flex justify-end" id="buttonClose">
+                    <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
+                </button>
+            </div>
+            <div class="text-center text-white">Link 1</div>
+        </div>
     </div>
-    
-   
 
     <main>
-
-
-		<section class="w-full mx-auto lg:w-[960px] mt-24">
-			<div class="w-[1240px]">
-				<span class="font-bold text-5xl m-0"
-					>Fundamentos JavaScript - parte 1</span
-				>
-			</div>
-		</section>
-		<section class="w-full mx-auto lg:w-[960px] py-44">
-			<span class="font-bold text-5xl m-0 flex my-16"
-				>Fundamentos JavaScript - parte 2</span
-			>
-			<span class="mt-4"
-				>1 - En el head o cabecera de un archivo html con las etiquetas <span
-					class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
-					>&lt;script&gt &lt;/script&gt</span
-				></span
-			>
-			
-            <div class="border border-gray-300 rounded p-4 w-full mx-auto lg:w-[960px] mt-4">
-                <pre class="text-gray-600" id="code">
-                    &lt;!DOCTYPE html&gt;
-                    &lt;html lang=&quot;en&quot;&gt;
-                    &lt;head&gt;
-                        &lt;meta charset=&quot;UTF-8&quot;&gt;
-                        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-                        &lt;title&gt;JS Basic&lt;/title&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;h1&gt;Fundamentos de JS&lt;/h1&gt;    
-                        &lt;script&gt;
-                            alert(&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;);
-                        &lt;/script&gt;
-                    &lt;/body&gt;
-                    &lt;/html&gt;
-                </pre>
-                <button class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none" id="button">Copiar</button>
+        <section class="w-full mx-auto lg:w-[960px] mt-24">
+            <div class="w-[1240px]">
+                <span class="font-bold text-5xl m-0">Fundamentos JavaScript - parte 1</span>
             </div>
+        </section>
+        <section class="w-full mx-auto lg:w-[960px] py-44">
+            <span class="font-bold text-5xl m-0 flex my-16">Fundamentos JavaScript - parte 2</span>
+            <span class="mt-4">1 - En el head o cabecera de un archivo html con las etiquetas <span
+                    class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">&lt;script&gt
+                    &lt;/script&gt</span></span>
+                    <div class="border border-gray-300 rounded  w-full mx-auto lg:w-[960px] mt-4">
+                        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+                            <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+                            <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none" id="button">
+                                <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2">
+                                <span>Copiar</span>
+                            </button>
+                            
+                        </div>
+                        <pre class="text-gray-600 overflow-auto mt-2 pl-4 pb-4" id="code">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;JS Basic&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Fundamentos de JS&lt;/h1&gt;    
+        &lt;script&gt;
+            alert(&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;);
+        &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
+                    </div>
+                    
+        </section>
+        <section class="w-full mx-auto lg:w-[960px] py-44">
+            <span class="font-bold text-5xl m-0 flex">Fundamentos JavaScript - parte 3</span>
+        </section>
+    </main>
 
-		</section>
+    <script>
+        const buttonOpenSide = document.getElementById("buttonOpen");
+        const buttonCloseSide = document.getElementById("buttonClose");
+        const sidebar = document.getElementById("sidebar");
+        const equis = document.getElementById("equis");
 
-		<section class="w-full mx-auto lg:w-[960px] py-44">
-			<span class="font-bold text-5xl m-0 flex"
-				>Fundamentos JavaScript - parte 3</span
-			>
-		</section>
-	</main>
-    
-     <script>
+        buttonOpenSide.addEventListener("click", function () {
+            sidebar.classList.remove("hidden");
+            equis.classList.remove("hidden");
+        });
+
+        buttonCloseSide.addEventListener("click", function () {
+            sidebar.classList.add("hidden");
+            equis.classList.add("hidden");
+        });
+
         const button = document.getElementById("button");
         const codeElement = document.getElementById("code");
-    
-        if (button && codeElement) {
-            button.addEventListener("click", function () {
-                const range = document.createRange();
-                range.selectNode(codeElement);
-    
-                const selection = window.getSelection();
-                if (selection) {
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                }
-    
-                
-                document.execCommand('copy');
-    
-                
-                if (selection) {
-                    selection.removeAllRanges();
-                }
-    
-                
-                alert('¡El código ha sido copiado!');
-            });
-        }
+
+        button.addEventListener("click", function () {
+        const codeElement = document.querySelector('pre');
+        const range = document.createRange();
+        range.selectNode(codeElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert('¡El código ha sido copiado!');
+    });
+
+    // Agregar números de línea al código
+    const code = document.getElementById("code");
+    code.innerHTML = code.innerHTML.split('\n').map((line, index) => `<span>${index + 1}.</span>${line}`).join('\n');
     </script>
-    
+
 </body>
+
 </html>

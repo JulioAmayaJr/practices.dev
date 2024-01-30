@@ -1,0 +1,1 @@
+import"https://cdn.tailwindcss.com";const n=document.getElementById("button"),o=document.getElementById("code");n&&o&&n.addEventListener("click",function(){const t=document.createRange();t.selectNode(o);const e=window.getSelection();e&&(e.removeAllRanges(),e.addRange(t)),document.execCommand("copy"),e&&e.removeAllRanges(),alert("¡El código ha sido copiado!")});

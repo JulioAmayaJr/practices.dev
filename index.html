@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,45 +7,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
 
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        html {
+            font-family: system-ui, sans-serif;
+        }
+
+        body {
+            background-color: rgb(27, 27, 30);
+            margin: 0;
+            display: flex;
+            color: #fff;
+            min-height: 100vh;
+            flex-direction: column;
+            position: relative; /* Importante para que el contenedor del fondo funcione correctamente */
+        }
+
+        /* Ajustes para el contenedor del fondo */
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Colocamos el contenedor del fondo detrás del contenido */
+        }
+
+        /* Estilos para el fondo */
+        .background-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+            opacity: 0.6;
+        }
+    </style>
 </head>
-<style is:global>
-    :root {
-        color-scheme: light dark;
-    }
-
-    html {
-        font-family: system-ui, sans-serif;
-    }
-
-    body {
-        background-color: rgb(27, 27, 30);
-        ;
-        display: flex;
-        color: #fff;
-        height: 100vh;
-        flex-direction: column;
-    }
-
-    #sidebar {
-        transition: transform 0.1s ease-in-out;
-    }
-
-    #sidebar.hidden {
-        transform: translateX(-100%);
-    }
-
-    #equis {
-        transition: transform 0.1s ease-in-out;
-    }
-
-    #equis.hidden {
-        transform: translateX(100%);
-    }
-</style>
 
 <body>
+
+    <!-- Contenedor del fondo -->
+    <div class="background-container">
+        <!-- Fondo con gradiente radial -->
+        <div class="background-overlay"></div>
+    </div>
+
+    <!-- Resto del contenido de tu página -->
     <div class="fixed bg-gray-800 w-full">
-        <header class="flex justify-between items-center py-3 w-[1040px] mx-auto">
+        <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
             <div class="flex items-center  py-45">
                 <img class="rounded-full w-[50px] h-[50px] mr-2"
                     src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
@@ -78,17 +89,17 @@
     </div>
 
     <main>
-        <section class="w-full mx-auto lg:w-[960px] mt-24">
-            <div class="w-[1240px]">
+        <section class="w-full mx-auto lg:w-[900px] mt-24">
+            <div class="">
                 <span class="font-bold text-5xl m-0">Fundamentos JavaScript - parte 1</span>
             </div>
         </section>
-        <section class="w-full mx-auto lg:w-[960px] py-44">
+        <section class="w-full mx-auto lg:w-[900px] py-44">
             <span class="font-bold text-5xl m-0 flex my-16">Fundamentos JavaScript - parte 2</span>
             <span class="mt-4">1 - En el head o cabecera de un archivo html con las etiquetas <span
                     class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">&lt;script&gt
                     &lt;/script&gt</span></span>
-                    <div class="border border-gray-300 rounded  w-full mx-auto lg:w-[960px] mt-4">
+                    <div class="border border-gray-300 rounded  w-full mx-auto lg:w-[900px] mt-4">
                         <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
                             <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
                             <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none" id="button">
@@ -116,9 +127,10 @@
                     </div>
                     
         </section>
-        <section class="w-full mx-auto lg:w-[960px] py-44">
+        <section class="w-full mx-auto lg:w-[900px] py-44">
             <span class="font-bold text-5xl m-0 flex">Fundamentos JavaScript - parte 3</span>
         </section>
+        
     </main>
 
     <script>

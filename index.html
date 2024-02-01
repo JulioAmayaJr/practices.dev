@@ -26,7 +26,6 @@
             position: relative;
         }
 
-
         .background-container {
             position: absolute;
             top: 0;
@@ -36,7 +35,6 @@
             z-index: -1;
         }
 
-
         .background-overlay {
             position: absolute;
             inset: 0;
@@ -44,6 +42,7 @@
             opacity: 0.6;
         }
 
+        
         pre {
             background-color: rgb(30, 30, 30);
             color: #fff;
@@ -53,10 +52,44 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        
+        .tag {
+            color: #569cd6; 
+        }
+
+        
+        .attribute {
+            color: #9cdcfe; 
+        }
+
+        
+        .value {
+            color: #ce9178; 
+        }
+
+        
+        .comment {
+            color: #6a9955; 
+        }
+
+        
+        .string {
+            color: #ce9178; 
+        }
+
+        
+        .number {
+            color: #b5cea8; 
+        }
+
        
-        pre * {
-            font-weight: bold;
-            color: #00FF00; 
+        .keyword {
+            color: #569cd6; 
+        }
+
+        
+        .punctuation {
+            color: #d4d4d4; 
         }
     </style>
 </head>
@@ -122,22 +155,23 @@
                 </button>
 
             </div>
-            <pre id="code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;JS Basic&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Fundamentos de JS&lt;/h1&gt;    
-    &lt;script&gt;
-        alert(&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;);
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+             <pre>
+    &lt;<span class="tag">!DOCTYPE html</span>&gt;
+    &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">&quot;en&quot;</span>&gt;
+    &lt;<span class="tag">head</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">&quot;UTF-8&quot;</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">http-equiv</span>=<span class="value">&quot;X-UA-Compatible&quot;</span> <span class="attribute">content</span>=<span class="value">&quot;IE=edge&quot;</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">&quot;viewport&quot;</span> <span class="attribute">content</span>=<span class="value">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+        &lt;<span class="tag">title</span>&gt;JS Basic&lt;/<span class="tag">title</span>&gt;
+    &lt;/<span class="tag">head</span>&gt;
+    &lt;<span class="tag">body</span>&gt;
+        &lt;<span class="tag">h1</span>&gt;Fundamentos de JS&lt;/<span class="tag">h1</span>&gt;
+        &lt;<span class="tag">script</span>&gt;
+            alert(<span class="string">&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;</span>);
+        &lt;/<span class="tag">script</span>&gt;
+    &lt;/<span class="tag">body</span>&gt;
+    &lt;/<span class="tag">html</span>&gt;
+    </pre>
         </div>
 
     </section>

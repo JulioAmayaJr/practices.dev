@@ -23,136 +23,150 @@
             color: #fff;
             min-height: 100vh;
             flex-direction: column;
-            position: relative; 
+            position: relative;
         }
 
-        
+
         .background-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; 
+            z-index: -1;
         }
 
-        
+
         .background-overlay {
             position: absolute;
             inset: 0;
             background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
             opacity: 0.6;
         }
+
+        pre {
+            background-color: rgb(30, 30, 30);
+            color: #fff;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+       
+        pre * {
+            font-weight: bold;
+            color: #00FF00; 
+        }
     </style>
 </head>
 
 <body>
 
-    
-    <div class="background-container">
-        
-        <div class="background-overlay"></div>
+
+<div class="background-container">
+
+    <div class="background-overlay"></div>
+</div>
+
+
+<div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+        <div class="flex items-center  py-45">
+            <img class="rounded-full w-[50px] h-[50px] mr-2"
+                 src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+                 alt="">
+            <span class="ml-3 text-xl">Julio Amaya</span>
+        </div>
+        <nav class="flex flex-row gap-x-10 mt-2">
+            <a href="">Search</a>
+            <a href="">Practices</a>
+            <a href="">Contact</a>
+        </nav>
+        <div class="py-3 fixed  top-4 right-[100px]">
+            <button class="focus:outline-none" id="buttonOpen">
+                <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
+            </button>
+        </div>
+    </header>
+    <div class='bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden' id="sidebar">
     </div>
 
-    
-    <div class="fixed bg-gray-800 w-full">
-        <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
-            <div class="flex items-center  py-45">
-                <img class="rounded-full w-[50px] h-[50px] mr-2"
-                    src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
-                    alt="">
-                <span class="ml-3 text-xl">Julio Amaya</span>
-            </div>
-            <nav class="flex flex-row gap-x-10 mt-2">
-                <a href="">Search</a>
-                <a href="">Practices</a>
-                <a href="">Contact</a>
-            </nav>
-            <div class="py-3 fixed  top-4 right-[100px]">
-                <button class="focus:outline-none" id="buttonOpen">
-                    <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
-                </button>
-            </div>
-        </header>
-        <div class='bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden'
-            id="sidebar">
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+        <div class="flex justify-end mt-4">
+            <button class="flex justify-end" id="buttonClose">
+                <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
+            </button>
         </div>
-
-        <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
-            <div class="flex justify-end mt-4">
-                <button class="flex justify-end" id="buttonClose">
-                    <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white">
-                </button>
-            </div>
-            <div class="text-center text-white">Link 1</div>
-        </div>
+        <div class="text-center text-white">Link 1</div>
     </div>
+</div>
 
-    <main>
-        <section class="w-full mx-auto lg:w-[900px] mt-24">
-            <div class="">
+<main>
+    <section class="w-full mx-auto lg:w-[900px] mt-24">
+        <div class="">
                 <span class="font-bold text-5xl m-0">Fundamentos JavaScript - parte 1</span>
-            </div>
-        </section>
-        <section class="w-full mx-auto lg:w-[900px] py-44">
-            <span class="font-bold text-5xl m-0 flex my-16">Fundamentos JavaScript - parte 2</span>
-            <span class="mt-4">1 - En el head o cabecera de un archivo html con las etiquetas <span
+        </div>
+    </section>
+    <section class="w-full mx-auto lg:w-[900px] py-44">
+                <span class="font-bold text-5xl m-0 flex my-16">Fundamentos JavaScript - parte 2</span>
+        <span class="mt-4">1 - En el head o cabecera de un archivo html con las etiquetas <span
                     class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">&lt;script&gt
                     &lt;/script&gt</span></span>
-                    <div class="border border-gray-300 rounded  w-full mx-auto lg:w-[900px] mt-4">
-                        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
-                            <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
-                            <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none" id="button">
-                                <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2">
-                                <span>Copiar</span>
-                            </button>
-                            
-                        </div>
-                        <pre class="text-gray-600 overflow-auto mt-2 pl-4 pb-4" id="code">
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        &lt;title&gt;JS Basic&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Fundamentos de JS&lt;/h1&gt;    
-        &lt;script&gt;
-            alert(&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;);
-        &lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;</pre>
-                    </div>
-                    
-        </section>
-        <section class="w-full mx-auto lg:w-[900px] py-44">
-            <span class="font-bold text-5xl m-0 flex">Fundamentos JavaScript - parte 3</span>
-        </section>
-        
-    </main>
+        <div class="border border-gray-300 rounded  w-full mx-auto lg:w-[900px] mt-4">
+            <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+                <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+                <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none" data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+                    <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2">
+                    <span>Copiar</span>
+                </button>
 
-    <script>
-        const buttonOpenSide = document.getElementById("buttonOpen");
-        const buttonCloseSide = document.getElementById("buttonClose");
-        const sidebar = document.getElementById("sidebar");
-        const equis = document.getElementById("equis");
+            </div>
+            <pre id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;JS Basic&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Fundamentos de JS&lt;/h1&gt;    
+    &lt;script&gt;
+        alert(&quot;Alerta con JavaScript 🎉 🎆 🎊&quot;);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
 
-        buttonOpenSide.addEventListener("click", function () {
-            sidebar.classList.remove("hidden");
-            equis.classList.remove("hidden");
-        });
+    </section>
+    <section class="w-full mx-auto lg:w-[900px] py-44">
+                <span class="font-bold text-5xl m-0 flex">Fundamentos JavaScript - parte 3</span>
+    </section>
 
-        buttonCloseSide.addEventListener("click", function () {
-            sidebar.classList.add("hidden");
-            equis.classList.add("hidden");
-        });
+</main>
 
-        const button = document.getElementById("button");
-        const codeElement = document.getElementById("code");
+<script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
 
-        button.addEventListener("click", function () {
+    buttonOpenSide.addEventListener("click", function () {
+        sidebar.classList.remove("hidden");
+        equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+        sidebar.classList.add("hidden");
+        equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    button.addEventListener("click", function () {
         const codeElement = document.querySelector('pre');
         const range = document.createRange();
         range.selectNode(codeElement);
@@ -160,13 +174,25 @@
         window.getSelection().addRange(range);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        alert('¡El código ha sido copiado!');
+        
+        
+        const icon = button.querySelector('img');
+        const iconCopied = button.getAttribute('data-icon-copied');
+        icon.src = iconCopied;
+        
+        
+        button.querySelector('span').textContent = 'Copiado';
+        
+        
+        setTimeout(function() {
+            const iconCopy = button.getAttribute('data-icon-copy');
+            icon.src = iconCopy;
+            button.querySelector('span').textContent = 'Copiar';
+        }, 2000); 
     });
 
-    
-    const code = document.getElementById("code");
-    code.innerHTML = code.innerHTML.split('\n').map((line, index) => `<span>${index + 1}.</span>${line}`).join('\n');
-    </script>
+
+</script>
 
 </body>
 

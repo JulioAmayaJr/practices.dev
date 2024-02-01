@@ -23,20 +23,20 @@
             color: #fff;
             min-height: 100vh;
             flex-direction: column;
-            position: relative; /* Importante para que el contenedor del fondo funcione correctamente */
+            position: relative; 
         }
 
-        /* Ajustes para el contenedor del fondo */
+        
         .background-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Colocamos el contenedor del fondo detrás del contenido */
+            z-index: -1; 
         }
 
-        /* Estilos para el fondo */
+        
         .background-overlay {
             position: absolute;
             inset: 0;
@@ -48,13 +48,13 @@
 
 <body>
 
-    <!-- Contenedor del fondo -->
+    
     <div class="background-container">
-        <!-- Fondo con gradiente radial -->
+        
         <div class="background-overlay"></div>
     </div>
 
-    <!-- Resto del contenido de tu página -->
+    
     <div class="fixed bg-gray-800 w-full">
         <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
             <div class="flex items-center  py-45">
@@ -163,7 +163,7 @@
         alert('¡El código ha sido copiado!');
     });
 
-    // Agregar números de línea al código
+    
     const code = document.getElementById("code");
     code.innerHTML = code.innerHTML.split('\n').map((line, index) => `<span>${index + 1}.</span>${line}`).join('\n');
     </script>

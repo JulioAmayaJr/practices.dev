@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #9cdcfe;
+    }
+
+    .value {
+      color: #ce9178;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #ce9178;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #569cd6;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">Bases de Datos Relacionales</a></div>
+      
+    </div>
+  </div>
+
+  <main class="mt-9">
+    <section class="w-full mx-auto lg:w-[900px]" id="poo">
+      <span class="font-bold text-5xl flex my-[280px] sm:my-16 py-2">Bases de Datos Relacionales</span>
+      <div class="-my-[250px] md:my-[50px]">
+        <!-- /*POO-->
+        <span class="">En una base de datos relacional, la información se organiza en tablas que están relacionadas entre sí. Estas relaciones se establecen mediante llaves primarias y llaves externas (o foráneas).</span>
+        <img class="mx-auto py-4" src="chucho.png" alt="">
+        <!---->
+      </div>
+      
+    </section>
+    
+    <section class="w-full mx-auto lg:w-[900px]" id="clasesObject">
+      <!-- /*Clases y objetos -->
+      <span class="font-bold text-2xl">Tablas</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2"> Las tablas son la estructura básica en una base de datos relacional. Cada tabla tiene columnas que representan los atributos de los datos y filas que representan las entradas individuales de datos.</li>
+      </ul>
+      <img class="mx-auto py-4" src="1.png" alt="">
+
+      <!---->
+    </section>
+
+    <section class="w-full mx-auto lg:w-[900px]">
+      <!-- /*Atributos y metodos -->
+      <span class="font-bold text-2xl mt-9">Llaves Primarias</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2"> Una llave primaria es un conjunto de columnas que identifica de forma única cada fila en una tabla. Se utiliza para garantizar la integridad de los datos y se define mediante la restricción <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">PRIMARY KEY</span>
+        </li>
+      </ul>
+      <img class="mx-auto py-4" src="2.png" alt="">
+      <!---->
+    </section>
+
+      <!-- /*Section llaves Foraneas -->
+    <section class="w-full mx-auto lg:w-[900px]">
+      <!-- /*Llaves foraneas -->
+      <span class="font-bold text-2xl mt-9">Llaves Foráneas</span>
+      <ul class="list-disc ml-6 mb-9">
+        <li class="ml-3 mt-2">Una llave foránea es una columna o conjunto de columnas en una tabla que hace referencia a la clave primaria de otra tabla. Se utiliza para establecer relaciones entre las tablas y se define mediante la restricción <span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">FOREIGN KEY</span>
+        </li>
+      </ul>
+      
+      <!---->
+    </section>
+
+    <!-- /*Section llaves Foraneas -->
+    <section class="w-full mx-auto lg:w-[900px]">
+        <!-- /*Llaves foraneas -->
+        <span class="font-bold text-2xl mt-9">Relaciones</span>
+        <ul class="list-disc ml-6">
+          <li class="ml-3 mt-2">Las relaciones entre tablas se establecen mediante llaves primarias y foráneas. Por ejemplo, una tabla de "Pedidos" puede tener una llave foránea que hace referencia a la llave primaria de una tabla de "Clientes".
+          </li>
+        </ul>
+        <img class="mx-auto py-4" src="3.png" alt="">
+        <!---->
+      </section>
+
+
+    <section class="w-full mx-auto lg:w-[900px]">
+       <!-- Ejemplo -->
+       <span class="font-bold text-2xl mt-9">Inserción de datos</span>
+       <div class="border border-gray-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">SQL</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+        <pre>  
+INSERT INTO Clientes (ClienteID, Nombre, Email) VALUES (1, 'Juan Pérez', 'juan@gmail.com');
+INSERT INTO Clientes (ClienteID, Nombre, Email) VALUES (2, 'María García', 'maria@gmail.com');
+
+INSERT INTO Pedidos (PedidoID, ClienteID, FechaPedido, Total) VALUES (101, 1, '2024-02-01', 150.00);
+INSERT INTO Pedidos (PedidoID, ClienteID, FechaPedido, Total) VALUES (102, 2, '2024-02-02', 200.50); </pre>
+      </div>
+      <!-- -->
+    </section>
+
+    
+
+    <!-- /*Section actividad -->
+    <section class="w-full mx-auto lg:w-[900px] mb-9">
+      <!-- /*CONTRUCTORES -->
+      <span class="font-bold text-2xl mt-9">Ejercicio 1</span><br>
+      <span>En este ejercicio, vamos a crear una base de datos llamada "GestionTareas" que servirá como backend para una aplicación de gestión de tareas. Esta base de datos almacenará información sobre usuarios, proyectos y tareas, permitiendo a los usuarios organizar, asignar y monitorear el progreso de las tareas dentro de diferentes proyectos.</span><br>
+      <span class="font-bold">Pasos:</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2">Crea una base de datos llamada GestionTareas.</li>
+        <li class="ml-3 mt-2">Crea una tabla llamada Usuarios con las siguientes columnas (UsuarioID, Nombre, Email, Departamento)</li>
+        <li class="ml-3 mt-2">Crea una tabla llamada Proyectos con las siguientes columnas (ProyectoID, Nombre, Descripcion, FechaInicio, FechaFin)</li>
+        <li class="ml-3 mt-2">Crea una tabla llamada Tareas con las siguientes columnas (TareaID, ProyectoID, Descripcion, FechaCreacion, FechaLimite, UsuarioID, Estado)</li>
+      </ul>
+      <!---->
+    </section>
+
+    <section class="w-full mx-auto lg:w-[900px] mb-9">
+      <span class="font-bold text-2xl mt-9">Normalizacion link: <a href="https://bookdown.org/paranedagarcia/database/normalizacion.html" class="text-blue-600 visited:text-purple-600 ...">
+        Bookdown
+      </a></span><br>
+    </section>
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

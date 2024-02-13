@@ -143,8 +143,117 @@
       </div>
       
     </section>
+    <section class="w-full mx-auto lg:w-[900px]">
+       <!-- Ejemplo -->
+       <div class="border border-gray-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">JavaScript</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+        <pre>  
+class Empleado {
+  constructor(id, nombre, fechaIngreso, salario) {
+    (this.id = id),
+      (this.nombre = nombre),
+      (this.fechaIngreso = fechaIngreso),
+      (this.salario = salario);
+  }
+
+  calcularTiempo() {
+    let fechaActual = new Date();
+    let fechaYear = fechaActual.getFullYear();
+    let fechaSplit = this.fechaIngreso.split("-");
+    return fechaYear - fechaSplit[2];
+  }
+  getSalario() {
+    return this.salario;
+  }
+
+  setNombre(nombre) {
+    return (this.nombre = nombre);
+  }
+
+  setSalario(salario) {
+    return (this.salario = salario);
+  }
+
+  calcularBonificacion() {
+    if (this.calcularTiempo() === 1) {
+      let bonificacion = this.salario * 0.05;
+      console.log("La bonificacion es de: $" + bonificacion);
+    } else if (this.calcularTiempo() == 2) {
+      let bonificacion = this.salario * 0.1;
+      console.log("La bonificacion es de: $" + bonificacion);
+    }
+  }
+}
+
+class Departamento {
+  constructor(nombre) {
+    (this.nombre = nombre), (this.empleadoList = []), this.gerente;
+  }
+
+  agregarEmpleadoList(empleado) {
+    let empleadoExiste = this.empleadoList.indexOf(empleado);
+    if (empleadoExiste != -1) {
+      console.log("No se puede agregar un mismo empleado");
+    } else {
+      this.empleadoList.push(empleado);
+      console.log("Se agrego el empleado correctamente");
+    }
+  }
+
+  calcularSumaSalario() {
+    let sumaSalario = 0;
+    if (this.empleadoList.length > 0) {
+      this.empleadoList.forEach((empleado) => {
+        sumaSalario += empleado.getSalario();
+        console.log("Suma del departamento: " + sumaSalario);
+      });
+    }
+  }
+
+  eliminarEmpleadoList(empleado) {
+    let posicionEmpleado = this.empleadoList.indexOf(empleado);
+
+    if (posicionEmpleado != -1) {
+      this.empleadoList.splice(posicionEmpleado, 1);
+      console.log("Se elimino correctamente");
+    } else {
+      console.log("No existe el empledo a eliminar");
+    }
+  }
+}
+
+const empleado1 = new Empleado(1, "Julio", "01-01-2019", 400);
+empleado1.setNombre("Mauricio");
+const depa = new Departamento("RRHH");
+depa.agregarEmpleadoList(empleado1);
+depa.agregarEmpleadoList(empleado1);
+empleado1.calcularTiempo();</pre>
+      </div>
+      <!-- -->
+    </section>
     
+    <section class="w-full mx-auto lg:w-[900px]" id="poo">
     
+      <div class="-my-[250px] md:my-[50px]">
+        <!-- /*POO-->
+       
+        
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2">Terminar lo que quedo pendiente en la clase.</li>
+        <li class="ml-3 mt-2">Realizar 3 instancias de cada clase.</li>
+        <li class="ml-3 mt-2">Probar cada metodo y dejar constancia de ellos en el script.</li>
+      </ul>
+        <!---->
+      </div>
+      
+    </section>
     
   </main>
 

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #4ec9b0;
+      font-weight: bold;
+    }
+
+    .value {
+      color: #569cd6;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #DCDCAA;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #088b0e;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">Desarrollo de Controladores y Vistas</a></div>
+      
+    </div>
+  </div>
+
+  <main class="mt-9 ">
+    <section class="w-full mx-auto lg:w-[900px]" id="">
+      <span class="font-bold text-5xl flex my-[100px] sm:my-16 py-2 ">Desarrollo de Controladores y Vistas</span>
+      <div class=" ">
+        <!-- /*POO-->
+        <span class="">En esta practica debemos ajustar las tablas con las que trabajamos anteriormente, es necesario utilizar migraciones. La estructura de las tablas en SQL debe ser la siguiente:</span><br><br>
+              <img class="mx-auto" src="1.jpg" alt="">
+
+        <!---->
+      </div>
+    </section>
+
+
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+      <span>Modificar nuestro Layout</span>
+      <div class="">
+        
+        
+      <img class="mx-auto mb-9" src="2.png" alt="">
+       <div class="border border-black-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9 bg-black">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+ <pre>
+&lt;<span class="value">header</span>&gt;
+    &lt;<span class="value tag">nav</span> <span class="attribute">class</span>=<span class="string">"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"</span>&gt;
+        &lt;<span class="value tag">div</span> <span class="attribute">class</span>=<span class="string">"container-fluid"</span>&gt;
+            &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"navbar-brand"</span>&gt;Store UNIVO VG&lt;/<span class="value tag">a</span>&gt;
+            &lt;<span class="value tag">button</span> <span class="attribute">class</span>=<span class="string">"navbar-toggler" <span class="attribute">type</span>="button" <span class="attribute">data-bs-toggle</span>="collapse" <span class="attribute">data-bs-target</span>=".navbar-collapse" <span class="attribute">aria-controls</span>="navbarSupportedContent"
+                    <span class="attribute">aria-expanded</span>="false" <span class="attribute">aria-label</span>="Toggle navigation"</span>&gt;
+                &lt;<span class="value tag">span</span> <span class="attribute">class</span>=<span class="string">"navbar-toggler-icon"</span>&gt;&lt;/<span class="value tag">span</span>&gt;
+            &lt;/<span class="value tag">button</span>&gt;
+            &lt;<span class="value tag">div</span> <span class="attribute">class</span>=<span class="string">"navbar-collapse collapse d-sm-inline-flex justify-content-between"</span>&gt;
+                &lt;<span class="value tag">ul</span> <span class="attribute">class</span>=<span class="string">"navbar-nav flex-grow-1"</span>&gt;
+                    &lt;<span class="value tag">li</span> <span class="attribute">class</span>=<span class="string">"nav-item"</span>&gt;
+                        &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"nav-link text-dark"</span>&gt;Inicio&lt;/<span class="value tag">a</span>&gt;
+                    &lt;/<span class="value tag">li</span>&gt;
+                    &lt;<span class="value tag">li</span> <span class="attribute">class</span>=<span class="string">"nav-item dropdown"</span>&gt;
+                        &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"nav-link dropdown-toggle" <span class="attribute">href</span>="#" <span class="attribute">id</span>="navbarDropdown" <span class="attribute">role</span>="button" <span class="attribute">data-bs-toggle</span>="dropdown" <span class="attribute">aria-expanded</span>="false"</span>&gt;
+                            Catalogo
+                        &lt;/<span class="value tag">a</span>&gt;
+                        &lt;<span class="value tag">ul</span> <span class="attribute">class</span>=<span class="string">"dropdown-menu" <span class="attribute">aria-labelledby</span>="navbarDropdown"</span>&gt;
+                            &lt;<span class="value tag">li</span> <span class="attribute">class</span>=<span class="string">"nav-item"</span>&gt;
+                                &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"nav-link text-dark"</span>&gt;Categorias&lt;/<span class="value tag">a</span>&gt;
+                            &lt;/<span class="value tag">li</span>&gt;
+                            &lt;<span class="value tag">li</span> <span class="attribute">class</span>=<span class="string">"nav-item"</span>&gt;
+                                &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"nav-link text-dark"</span>&gt;Consolas&lt;/<span class="value tag">a</span>&gt;
+                            &lt;/<span class="value tag">li</span>&gt;
+                            &lt;<span class="value tag">li</span> <span class="attribute">class</span>=<span class="string">"nav-item"</span>&gt;
+                                &lt;<span class="value tag">a</span> <span class="attribute">class</span>=<span class="string">"nav-link text-dark"</span>&gt;Productos&lt;/<span class="value tag">a</span>&gt;
+                            &lt;/<span class="value tag">li</span>&gt;
+                        &lt;/<span class="value tag">ul</span>&gt;
+                    &lt;/<span class="value tag">li</span>&gt;
+                    &lt;<span class="value tag">li</span>&gt;
+                               
+                            &lt;<span class="value tag">a</span> <span class="attribute">href</span>="#" <span class="attribute">class</span>=<span class="string">"nav-link"</span>&gt;
+                                &lt;<span class="value tag">i</span> <span class="attribute">class</span>=<span class="string">"fas fa-shopping-cart"</span>&gt;&lt;/<span class="value tag">i</span>&gt;&amp;nbsp;(0)
+                            &lt;/<span class="value tag">a</span>&gt;
+                            
+                    &lt;/<span class="value tag">li</span>&gt;
+                    &lt;/<span class="value tag">li</span>&gt;
+                &lt;/<span class="value tag">ul</span>&gt;
+            &lt;/<span class="value tag">div</span>&gt;
+        &lt;/<span class="value tag">div</span>&gt;
+    &lt;/<span class="value tag">nav</span>&gt;
+&lt;/<span class="value tag">header</span>&gt;
+&lt;/<span class="value">div</span>&gt;
+    &lt;<span class="value">main</span> <span class="attribute">role</span>="main" <span class="attribute">class</span>="pb-3"&gt;
+        @RenderBody()
+    &lt;/<span class="value">main</span>&gt;
+&lt;/<span class="value">div</span>&gt;
+</pre>
+      </div>
+        <!---->
+      </div>
+    </section>
+<section class="w-full mx-auto lg:w-[900px] mb-9">
+      <!-- /*CONTRUCTORES -->
+      <span class="font-bold text-2xl mt-9">Actividad</span><br>
+      <span>Con lo comprendido en la practica</span><br>
+      <span class="font-bold">Realizar:</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2">Crear los controladores correspondientes a las funcionalidades requeridas por la aplicación..</li>
+        <li class="ml-3 mt-2">Desarrollar las vistas necesarias.</li>
+      </ul>
+      <!---->
+    </section>
+    
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

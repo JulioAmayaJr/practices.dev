@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #9cdcfe;
+    }
+
+    .value {
+      color: #ce9178;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #ce9178;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #569cd6;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">Herencia</a></div>
+      
+    </div>
+  </div>
+
+  <main class="mt-9">
+    <section class="w-full mx-auto lg:w-[900px]" id="poo">
+      <span class="font-bold text-5xl flex my-[280px] sm:my-16 ">Herencia</span>
+      <div class="-my-[250px] md:my-[50px]">
+        <!-- /*POO-->
+        <span class="">En programación orientada a objetos, la herencia es un mecanismo utilizado para alcanzar algunos de los objetivos más preciados en el desarrollo de software como lo son la reutilización y la extensibilidad.</span><br><br>
+        <!---->
+      </div>
+      
+    </section>
+
+    <section class="w-full mx-auto lg:w-[900px]" id="poo">
+      
+      <div class="-my-[250px] md:my-[50px]">
+              <span class="font-bold text-2xl flex my-[280px] sm:my-16">Ejercicio</span>
+
+        <!-- /*POO-->
+        <span class="">En una tienda de electrónica, se necesita implementar un sistema para gestionar las órdenes de los clientes. La tienda ofrece una variedad de productos, como televisores, laptops, smartphones y accesorios.</span><br><br>
+        <span class="font-bold">La empresa solicita lo siguiente:</span><br><br>
+        <span><span class="font-bold">Gestión de productos:</span> Se deben listar los productos disponibles, incluyendo su nombre, precio y cantidad en stock.</span><br><br>
+        <span><span class="font-bold">Gestión de pedidos del cliente:</span> Se debe permitir a los clientes realizar pedidos de productos. Cada pedido debe contener el producto solicitado, la cantidad y el cliente que realizó el pedido.</span><br><br>
+        <span><span class="font-bold">Gestión de inventario:</span> Se debe mantener actualizado el inventario de productos después de cada pedido realizado.</span><br><br>
+      <span class="font-bold">El proceso que maneja la empresa es el siguiente:</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2">El cliente selecciona los productos que desea comprar, indicando la cantidad de cada uno.</li>
+        <li class="ml-3 mt-2">El sistema registra el pedido, verifica la disponibilidad de los productos en el inventario y actualiza el inventario después de cada pedido.</li>
+        <li class="ml-3 mt-2">El cliente recibe una confirmación del pedido junto con el total a pagar.</li>
+      </ul>
+        <!---->
+      </div>
+      
+    </section>
+
+
+
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #4ec9b0;
+      font-weight: bold;
+    }
+
+    .value {
+      color: #569cd6;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #DCDCAA;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #088b0e;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">Desarrollo de Controladores y Vistas</a></div>
+      
+    </div>
+  </div>
+
+  <main class="mt-9 ">
+  
+
+<section class="w-full mx-auto lg:w-[900px] mt-20" id="">
+      <span>Codigo para listar las consolas: </span>
+      <div class="">
+        
+        
+      <img class="mx-auto mb-9" src="2.png" alt="">
+       <div class="border border-black-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9 bg-black">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+ <pre>
+    &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"container p-3"</span>&gt;
+        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"row pt-4"</span>&gt;
+            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-6"</span>&gt;
+                &lt;<span class="value">h2</span> <span class="attribute">class</span>=<span class="string">"text-primary"</span>&gt;Lista de Consolas&lt;/<span class="value">h2</span>&gt;
+            &lt;/<span class="value">div</span>&gt;
+            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-6 text-end"</span>&gt;
+                &lt;<span class="value">a</span> <span class="attribute">class</span>=<span class="string">"btn btn-primary"</span>&gt;&lt;<span class="value">i</span> <span class="attribute">class</span>=<span class="string">"fa-solid fa-plus"</span>&gt;&lt;/<span class="value">i</span>&gt;&nbsp;Agregar Nueva Consola&lt;/<span class="value">a</span>&gt;
+            &lt;/<span class="value">div</span>&gt;
+        &lt;/<span class="value">div</span>&gt;
+        &lt;br /&gt;
+        &lt;table <span class="attribute">class</span>=<span class="string">"table table-striped table-bordered"</span> <span class="attribute">style</span>=<span class="string">"width:100%"</span>&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Nombre de Consola&lt;/<span class="value">th</span>&gt;
+                    &lt;th&gt;Opciones&lt;/<span class="value">th</span>&gt;
+                &lt;/<span class="value">tr</span>&gt;
+            &lt;/<span class="value">thead</span>&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td <span class="attribute">width</span>=<span class="string">"50%"</span>&gt;&lt;/<span class="value">td</span>&gt;
+                    &lt;td <span class="attribute">class</span>=<span class="string">"text-center"</span>&gt;
+                        &lt;div <span class="attribute">class</span>=<span class="string">"w-75 btn-group"</span> <span class="attribute">role</span>=<span class="string">"group"</span>&gt;
+                            &lt;a <span class="attribute">class</span>=<span class="string">"btn btn-warning mx-2"</span>&gt;&lt;<span class="value">i</span> <span class="attribute">class</span>=<span class="string">"fa-solid fa-pen-to-square"</span>&gt;&lt;/<span class="value">i</span>&gt;&lt;/<span class="value">a</span>&gt;
+                            &lt;a <span class="attribute">class</span>=<span class="string">"btn btn-danger mx-2"</span>&gt;&lt;<span class="value">i</span> <span class="attribute">class</span>=<span class="string">"fa-solid fa-trash"</span>&gt;&lt;/<span class="value">i</span>&gt;&lt;/<span class="value">a</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                    &lt;/<span class="value">td</span>&gt;
+                &lt;/<span class="value">tr</span>&gt;
+            &lt;/<span class="value">tbody</span>&gt;
+        &lt;/<span class="value">table</span>&gt;
+    &lt;/<span class="value">div</span>&gt;
+</pre>
+
+      </div>
+        <!---->
+      </div>
+    </section>
+
+
+
+<section class="w-full mx-auto lg:w-[900px] mt-20" id="">
+      <span>Codigo para crear las consolas: </span>
+      <div class="">
+        
+        
+      <img class="mx-auto mb-9" src="2.png" alt="">
+       <div class="border border-black-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9 bg-black">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button2">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+<pre id="preButton2">
+    &lt;<span class="value">form</span> <span class="attribute">method</span>=<span class="string">"post"</span>&gt;
+        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"border p-3"</span>&gt;
+            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"form-group row"</span>&gt;
+                &lt;<span class="value">h2</span> <span class="attribute">class</span>=<span class="string">"text-info pl-3"</span>&gt;Agregar Consola&lt;/<span class="value">h2</span>&gt;
+            &lt;/<span class="value">div</span>&gt;
+            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"row"</span>&gt;
+                &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-8"</span>&gt;
+                    &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"form-group row"</span>&gt;
+                        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-4"</span>&gt;
+                            &lt;<span class="value">label</span> <span class="attribute">asp-for</span>=<span class="string">"nombre"</span>&gt;Nombre&lt;/<span class="value">label</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-8"</span>&gt;
+                            &lt;<span class="value">input</span> <span class="attribute">asp-for</span>=<span class="string">"nombre"</span> <span class="attribute">class</span>=<span class="string">"form-control"</span> /&gt;
+                            &lt;<span class="value">span</span> <span class="attribute">asp-validation-for</span>=<span class="string">"nombre"</span> <span class="attribute">class</span>=<span class="string">"text-danger"</span>&gt;&lt;/<span class="value">span</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                    &lt;/<span class="value">div</span>&gt;&lt;br /&gt;
+                    &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"form-group row"</span>&gt;
+                        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-4"</span>&gt;
+                            &lt;<span class="value">label</span> <span class="attribute">asp-for</span>=<span class="string">"descripcion"</span>&gt;Descripcion&lt;/<span class="value">label</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-8"</span>&gt;
+                            &lt;<span class="value">textarea</span> <span class="attribute">asp-for</span>=<span class="string">"descripcion"</span> <span class="attribute">class</span>=<span class="string">"form-control summernote"</span>&gt;&lt;/<span class="value">textarea</span>&gt;
+                            &lt;<span class="value">span</span> <span class="attribute">asp-validation-for</span>=<span class="string">"descripcion"</span> <span class="attribute">class</span>=<span class="string">"text-danger"</span>&gt;&lt;/<span class="value">span</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                    &lt;/<span class="value">div</span>&gt;&lt;br /&gt;
+                    &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"form-group row"</span>&gt;
+                        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col-8 offset-4 row"</span>&gt;
+                            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col"</span>&gt;
+                                &lt;<span class="value">button</span> <span class="attribute">type</span>=<span class="string">"submit"</span> <span class="attribute">class</span>=<span class="string">"btn btn-info w-100"</span>&gt;&lt;<span class="value">i</span> <span class="attribute">class</span>=<span class="string">"fa-solid fa-check"</span>&gt;&lt;/<span class="value">i</span>&gt;&lt;/<span class="value">button</span>&gt;
+                            &lt;/<span class="value">div</span>&gt;
+                            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"col"</span>&gt;
+                                &lt;<span class="value">a</span> <span class="attribute">class</span>=<span class="string">"btn btn-danger w-100"</span>&gt;&lt;<span class="value">i</span> <span class="attribute">class</span>=<span class="string">"fa-solid fa-xmark"</span>&gt;&lt;/<span class="value">i</span>&gt;&lt;/<span class="value">a</span>&gt;
+                            &lt;/<span class="value">div</span>&gt;
+                        &lt;/<span class="value">div</span>&gt;
+                    &lt;/<span class="value">div</span>&gt;
+                &lt;/<span class="value">div</span>&gt;
+            &lt;/<span class="value">div</span>&gt;
+        &lt;/<span class="value">div</span>&gt;
+    &lt;/<span class="value">form</span>&gt;
+    &lt;<span class="value">section</span> <span class="attribute">Scripts</span>&gt;
+       
+        &lt;<span class="value">script</span>&gt;
+            $(document).ready(function () {
+                $('.summernote').summernote({
+                    height: 250,
+                    lang: 'es-Es'
+                });
+            });
+        &lt;/<span class="value">script</span>&gt;
+    &lt;/<span class="value">section</span>&gt;
+</pre>
+
+
+      </div>
+        <!---->
+      </div>
+    </section>
+
+
+
+
+
+<section class="w-full mx-auto lg:w-[900px] mb-9">
+      <!-- /*CONTRUCTORES -->
+      <span class="font-bold text-2xl mt-9">Actividad</span><br>
+      <span>Con lo comprendido en la practica</span><br>
+      <span class="font-bold">Realizar:</span>
+      <ul class="list-disc ml-6">
+        <li class="ml-3 mt-2">Desarrollar el metodo para la creacion de una consola.</li>
+      </ul>
+      <!---->
+    </section>
+    
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    const button2=document.getElementById("button2");
+
+
+    button2.addEventListener("click", function () {
+      const codeElement = document.querySelector("#preButton2");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button2.querySelector("img");
+      const iconCopied = button2.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button2.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button2.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button2.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+
+    
+    
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

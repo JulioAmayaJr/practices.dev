@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #4ec9b0;
+      font-weight: bold;
+    }
+
+    .value {
+      color: #569cd6;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #DCDCAA;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #088b0e;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">Clases Abstractas</a></div>
+      <div class="text-center text-white"><a href="#poli">Polimorfismo</a></div>
+    </div>
+  </div>
+
+  <main class="mt-9 ">
+  
+
+<section class="w-full mx-auto lg:w-[900px] my-[50px]">
+  <!-- /*CONTRUCTORES -->
+  <span class="font-bold text-2xl mt-9">Clase Abstracta</span><br>
+  <img src="1.png" class="mt-6" alt="">
+  <!---->
+</section>
+
+<section class="w-full mx-auto lg:w-[900px] my-[50px]">
+  <!-- /*CONTRUCTORES -->
+  <span class="font-bold text-2xl mt-9">Polimorfismo</span><br>
+  <img src="2.png" class="mt-6" alt="">
+  <!---->
+</section>
+
+<section class="w-full mx-auto lg:w-[900px] mt-20" id="">
+      <span>Codigo para la practica: </span>
+      
+        
+        
+       <div class="border border-black-300 rounded w-full mx-auto lg:w-[900px] mt-4 mb-9 bg-black">
+        <div class="flex justify-between items-start bg-gray-600 mt-0 h-9">
+          <div class="text-gray-600 text-sm text-white ml-4 mt-2">HTML</div>
+          <button class="py-1 px-2 flex items-center text-white rounded focus:outline-none"
+            data-icon-copy="copy-regular.svg" data-icon-copied="check-solid.svg" id="button">
+            <img src="copy-regular.svg" alt="Bars Icon" class="w-6 h-6 text-white mr-2" />
+            <span>Copiar</span>
+          </button>
+        </div>
+<pre>
+    &lt;<span class="value">!DOCTYPE html</span>&gt;
+    &lt;<span class="value">html</span> <span class="attribute">lang</span>=<span class="string">"en"</span>&gt;
+    &lt;<span class="value">head</span>&gt;
+        &lt;<span class="value">meta</span> <span class="attribute">charset</span>=<span class="string">"UTF-8"</span>&gt;
+        &lt;<span class="value">meta</span> <span class="attribute">name</span>=<span class="string">"viewport"</span> <span class="attribute">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;
+        &lt;<span class="value">title</span>&gt;Minecraft&lt;/<span class="value">title</span>&gt;
+        &lt;<span class="value">link</span> <span class="attribute">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"</span> <span class="attribute">rel</span>=<span class="string">"stylesheet"</span>&gt;
+    &lt;/<span class="value">head</span>&gt;
+    &lt;<span class="value">body</span> <span class="attribute">class</span>=<span class="string">"bg-gray-200 flex justify-center items-center h-screen"</span>&gt;
+        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"absolute top-0 left-0 right-0 flex justify-center space-x-4 mt-16"</span>&gt;
+            &lt;<span class="value">button</span> <span class="attribute">class</span>=<span class="string">"bg-blue-500 hover:bg-blue-600 text-white font-bold rounded w-10"</span>&gt;&lt;<span class="value">img</span> <span class="attribute">class</span>=<span class="string">"w-10"</span> <span class="attribute">src</span>=<span class="string">"https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/15/Grass_Block_JE4.png"</span> <span class="attribute">alt</span>=<span class="string">""</span>&gt;&lt;/<span class="value">button</span>&gt;
+            &lt;<span class="value">button</span> <span class="attribute">class</span>=<span class="string">"bg-blue-500 hover:bg-blue-600 text-white font-bold rounded w-10"</span>&gt;&lt;<span class="value">img</span> <span class="attribute">class</span>=<span class="string">"w-10"</span> <span class="attribute">src</span>=<span class="string">"https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c8/Block_of_Diamond_JE5_BE3.png"</span> <span class="attribute">alt</span>=<span class="string">""</span>&gt;&lt;/<span class="value">button</span>&gt;
+            &lt;<span class="value">button</span> <span class="attribute">class</span>=<span class="string">"bg-blue-500 hover:bg-blue-600 text-white font-bold rounded w-10"</span>&gt;&lt;<span class="value">img</span> <span class="attribute">class</span>=<span class="string">"w-10"</span> <span class="attribute">src</span>=<span class="string">"https://minecraft.wiki/images/Block_of_Coal_JE3_BE2.png"</span> <span class="attribute">alt</span>=<span class="string">""</span>&gt;&lt;/<span class="value">button</span>&gt;
+            &lt;<span class="value">button</span> <span class="attribute">class</span>=<span class="string">"bg-blue-500 hover:bg-blue-600 text-white font-bold rounded w-10"</span>&gt;&lt;<span class="value">img</span> <span class="attribute">class</span>=<span class="string">"w-10"</span> <span class="attribute">src</span>=<span class="string">"https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c1/Oak_Planks.png"</span> <span class="attribute">alt</span>=<span class="string">""</span>&gt;&lt;/<span class="value">button</span>&gt;
+        &lt;/<span class="value">div</span>&gt;
+        &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"relative"</span>&gt;
+            &lt;<span class="value">img</span> <span class="attribute">src</span>=<span class="string">"https://via.placeholder.com/150"</span> <span class="attribute">alt</span>=<span class="string">"Minecraft Pickaxe"</span> <span class="attribute">class</span>=<span class="string">"absolute top-0 left-0 w-20 h-20"</span>&gt;
+            &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"</span>&gt;
+                &lt;<span class="value">div</span> <span class="attribute">class</span>=<span class="string">"w-40 h-40 bg-green-500 rounded-full flex justify-center items-center"</span>&gt;
+                    &lt;<span class="value">img</span> <span class="attribute">id</span>=<span class="string">""</span> <span class="attribute">src</span>=<span class="string">"https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c1/Oak_Planks.png"</span> <span class="attribute">alt</span>=<span class="string">""</span> <span class="attribute">class</span>=<span class="string">"w-20"</span>&gt;
+                &lt;/<span class="value">div</span>&gt;
+                &lt;<span class="value">span</span> <span class="attribute">class</span>=<span class="string">"text-black font-bold text-center inline-block max-w-xs overflow-hidden"</span>&gt;&lt;/<span class="value">span</span>&gt;
+            &lt;/<span class="value">div</span>&gt;
+        &lt;/<span class="value">div</span>&gt;
+    &lt;/<span class="value">body</span>&gt;
+&lt;/<span class="value">html</span>&gt;
+</pre>
+
+
+      </div>
+        <!---->
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button2 = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+
+
+    button2.addEventListener("click", function () {
+      const codeElement = document.querySelector("#preButton2");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button2.querySelector("img");
+      const iconCopied = button2.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button2.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button2.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button2.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+
+    
+    
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

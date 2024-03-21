@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@heroicons/react/outline.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: rgb(27, 27, 30);
+      margin: 0;
+      display: flex;
+      color: #fff;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+      opacity: 0.6;
+    }
+
+    pre {
+      background-color: rgb(30, 30, 30);
+      color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .tag {
+      color: #569cd6;
+    }
+
+    .attribute {
+      color: #9cdcfe;
+    }
+
+    .value {
+      color: #ce9178;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+
+    .string {
+      color: #ce9178;
+    }
+
+    .number {
+      color: #b5cea8;
+    }
+
+    .keyword {
+      color: #569cd6;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+  </style>
+
+<body>
+  <div class="background-container">
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="fixed bg-gray-800 w-full">
+    <header class="flex justify-between items-center py-3 w-[940px] mx-auto">
+      <div class="flex items-center py-45">
+        <img class="rounded-full w-[50px] h-[50px] mr-2 hover:rotate-[359deg] duration-[10s]"
+          src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/que-se-necesita-estudiar-para-ser-programador-scaled-1200x900.jpg"
+          alt="" />
+        <span class="ml-3 text-xl mr-12">Julio Amaya</span>
+
+        <nav class="flex-row gap-x-10 mt-2 hidden sm:flex ml-[450px]">
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Search</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Practices</a>
+          <a href="#" class="hover:bg-slate-300 hover:text-black transition-colors rounded">Contact</a>
+        </nav>
+      </div>
+      <div class="py-3 fixed top-4 right-4">
+        <button class="focus:outline-none" id="buttonOpen">
+          <img src="bars-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white hover:bg-slate-600 transition-colors" />
+        </button>
+      </div>
+    </header>
+    <div class="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm hidden" id="sidebar">
+    </div>
+
+    <div class="bg-cyan-600 min-h-screen w-80 fixed top-0 right-0 hidden" id="equis">
+      <div class="flex justify-end mt-4">
+        <button class="flex justify-end" id="buttonClose">
+          <img src="xmark-solid.svg" alt="Bars Icon" class="w-6 h-6 text-white" />
+        </button>
+      </div>
+      <div class="text-center text-white"><a href="#bdr">SP,Dapper</a></div>
+      
+    </div>
+  </div>
+
+  <main class="mt-9 ">
+    <section class="w-full mx-auto lg:w-[900px]" id="">
+      <span class="font-bold text-5xl flex my-[280px] sm:my-16 py-2 ">SP, Dapper</span>
+      <div class="">
+        <!-- /*POO-->
+        <span class="">Empezaremos creando nuestra BD y nuestra tabla Productos simple.</span><br><br>
+        <img src="1.png" alt="">
+        <!---->
+      </div>
+    </section>
+<section class="w-full mx-auto lg:w-[900px]" id="">
+
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Creamos todos nuestros Stored Procedures.</span><br><br>
+    <img src="2.png" class="mx-auto" alt=""><br>
+    <img src="3.png" class="mx-auto" alt="">
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Modificamos nuestro appsettings.json</span><br><br>
+    <img src="4.png" class="mx-auto" alt=""><br>
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Crearemos una carpeta llamada Data la cual contendra una clase llamada Conexion con el siguiente codigo.</span><br><br>
+    <img src="5.png" class="mx-auto" alt=""><br>
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Luego nos vamos a la clase Program.cs para agregar nuestro Services.</span><br><br>
+    <img src="6.png" class="mx-auto" alt=""><br>
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">En nuestra carpeta de Models crearemos el model Producto.</span><br><br>
+    <img src="10.png" class="mx-auto" alt=""><br>
+  
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Crearemos en la raiz de nuestro proyecto una carpeta llamada Repositories la cual contendra una carpeta llamada Productos que a su vez contendra una interfaz llamada IProducto y una clase de implementacion que se llamara ImplementProducto.</span><br><br>
+    <img src="7.png" class="mx-auto" alt=""><br>
+    <img src="8.png" alt="">
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Nuestra interfaz tendra el siguiente codigo.</span><br><br>
+    <img src="9.png" class="mx-auto" alt=""><br>
+    <span class="">Nuestra clase de implementacion tendra el siguiente codigo.</span><br><br>
+    <img src="11.png" alt="">
+    <img src="12.png" alt="">
+    <!---->
+  </div>
+</section>
+
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Crearemos un controlador llamado ProductoController el cual contendra los siguiente metodos.</span><br><br>
+    <img src="13.png" class="mx-auto" alt=""><br>
+    <img src="14.png" class="mx-auto" alt=""><br>
+    <!---->
+  </div>
+</section>
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">En la clase Program.cs vamos a inyectar la dependencia de nuestra interfaz e implementacion de la siguiente manera: .</span><br><br>
+    <img src="15.png" class="mx-auto" alt=""><br>   
+    <!---->
+  </div>
+</section>
+
+
+<section class="w-full mx-auto lg:w-[900px]" id="">
+  <div class="">
+    <!-- /*POO-->
+    <span class="">Crearemos las vistas, seran vistas de Razor, de la siguiente manera.</span><br><br>
+    <img src="16.png" class="mx-auto" alt=""><br>
+    <!---->
+  </div>
+</section>
+
+
+   
+    
+  </main>
+
+  <script>
+    const buttonOpenSide = document.getElementById("buttonOpen");
+    const buttonCloseSide = document.getElementById("buttonClose");
+    const sidebar = document.getElementById("sidebar");
+    const equis = document.getElementById("equis");
+
+    buttonOpenSide.addEventListener("click", function () {
+      sidebar.classList.remove("hidden");
+      equis.classList.remove("hidden");
+    });
+
+    buttonCloseSide.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      equis.classList.add("hidden");
+    });
+
+    const button = document.getElementById("button");
+    const codeElement = document.getElementById("code");
+
+    button.addEventListener("click", function () {
+      const codeElement = document.querySelector("pre");
+      const range = document.createRange();
+      range.selectNode(codeElement);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+
+      const icon = button.querySelector("img");
+      const iconCopied = button.getAttribute("data-icon-copied");
+      icon.src = iconCopied;
+
+      button.querySelector("span").textContent = "Copiado";
+
+      setTimeout(function () {
+        const iconCopy = button.getAttribute("data-icon-copy");
+        icon.src = iconCopy;
+        button.querySelector("span").textContent = "Copiar";
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>
